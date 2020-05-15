@@ -2,15 +2,14 @@ package JavaPrograms;
 
 import java.util.LinkedList;
 
+/*
+ * Input linked list : 1->3->4 and 2-> 3-> 7
+ * 
+ * Output should be : 732 + 431 = 1,163
+ * 
+ * so output is 3->6->1->1 Linked list
+ */
 public class LinkedListSum {
-
-	/*
-	 * Input linked list : 1->3->4 and 2-> 3-> 7
-	 * 
-	 * Output should be : 732 + 431 = 1,163
-	 * 
-	 * so output is 3->6->1->1 Linked list
-	 */
 
 	public static void main(String[] args) {
 		String c = "", t = "";
@@ -28,8 +27,7 @@ public class LinkedListSum {
 			c += i;
 
 		}
-		int val = Integer.valueOf(c);
-		// System.out.println(val);
+
 		LinkedList<Integer> list2 = new LinkedList<Integer>();
 		list2.add(2);
 		int temp1 = list2.get(0);
@@ -42,27 +40,17 @@ public class LinkedListSum {
 			t += i;
 
 		}
-		int val1 = Integer.valueOf(t) + val;
-		StringBuilder sb = new StringBuilder(String.valueOf(val1));
 
-		//System.out.println(sb.reverse().toString());
-		
+		StringBuilder sb = new StringBuilder(String.valueOf(Integer.valueOf(t) + Integer.valueOf(c)));
+
 		LinkedList<Integer> result2 = new LinkedList<Integer>();
-		
-		int[] digits = sb.reverse().toString().chars().map(cha -> cha -'0').toArray();  
-	    for(int d : digits)
-	    {
-	    	result2.add(d);
-	    }
-	        System.out.print(result2);
 
-		/*
-		 * System.out.println(result2);
-		 * 
-		 * System.out.println(val1);
-		 * 
-		 * System.out.println(list1); System.out.println(list2);
-		 */
+		int[] digits = sb.reverse().toString().chars().map(cha -> cha - '0').toArray();
+		for (int d : digits) {
+			result2.add(d);
+		}
+		System.out.print(result2);
+
 	}
 
 }
