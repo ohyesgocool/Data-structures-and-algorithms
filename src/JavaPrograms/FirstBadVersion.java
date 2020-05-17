@@ -19,7 +19,7 @@ public class FirstBadVersion {
 
 	public static void main(String[] args) {
 
-		int n = 10;
+		int n = 6;
 		ArrayList<Integer> arr = new ArrayList<>();
 		for (int o = 1; o <= 10; o++) {
 			arr.add(o);
